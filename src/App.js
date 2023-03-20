@@ -22,7 +22,7 @@ function App({ names }) {
         names={names}
         searchValue={searchValue}
         // we don't pass setSearchValue here because in Namepicker we never update that state
-        shortList={shorlist}
+        shortList={shortList}
         setShortList={setShortList}
       />
     </>
