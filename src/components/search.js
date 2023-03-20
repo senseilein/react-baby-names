@@ -1,8 +1,10 @@
 import React from "react";
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
-export function Search() {
-  const [searchValue, setSearchValue] = useState("");
+export function Search({ searchValue, setSearchValue }) {
+  // this state has been elevated to the Parent Component (App.js) so that it's available in the sibling Component NamePicker
+  // then pass it through props (we don't need to import useState any longer)
+  // const [searchValue, setSearchValue] = useState("");
 
   const handleChange = (event) => {
     setSearchValue(event.target.value);
