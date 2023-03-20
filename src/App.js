@@ -17,7 +17,11 @@ function App({ names }) {
   return (
     <>
       <Search searchValue={searchValue} setSearchValue={setSearchValue} />
-      <ShortList shortList={shortList} setShortList={setShortList} />
+      <ShortList
+        names={names}
+        shortList={shortList}
+        setShortList={setShortList}
+      />
       <NamePicker
         names={names}
         searchValue={searchValue}
