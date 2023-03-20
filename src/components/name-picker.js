@@ -1,4 +1,5 @@
 import React from "react";
+import { NameList } from "./name-list";
 
 export function NamePicker({ names, searchValue, shortList, setShortList }) {
   // in the <ul> below We want to display the names that includes the searchValue
@@ -15,19 +16,7 @@ export function NamePicker({ names, searchValue, shortList, setShortList }) {
 
   return (
     <div id="NamePicker">
-      <ul>
-        {filteredNames.map((entry) => {
-          return (
-            <li className={entry.sex} key={entry.id}>
-              {/* pass the onClick as an arrow function since it takes an arg*/}
-
-              <button onClick={() => addToShortList(entry.id)}>
-                {entry.name}
-              </button>
-            </li>
-          );
-        })}
-      </ul>
+      <NameList nameList={filteredNames} onItemClick={addToShortList} />
     </div>
   );
 }
