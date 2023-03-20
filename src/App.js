@@ -11,6 +11,8 @@ function App({ names }) {
 
   const [searchValue, setSearchValue] = useState("");
 
+  const [shorlist, setShortList] = useState([]);
+
   return (
     <>
       <Search searchValue={searchValue} setSearchValue={setSearchValue} />
@@ -18,6 +20,8 @@ function App({ names }) {
         names={names}
         searchValue={searchValue}
         // we don't pass setSearchValue here because in Namepicker we never update that state
+        shortList={shorlist}
+        setShortList={setShortList}
       />
     </>
   );

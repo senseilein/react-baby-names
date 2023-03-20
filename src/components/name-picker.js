@@ -1,6 +1,6 @@
 import React from "react";
 
-export function NamePicker({ names, searchValue }) {
+export function NamePicker({ names, searchValue, shortList, setShortList }) {
   // in the <ul> below We want to display the names that includes the searchValue
   const filteredNames = names.filter((entry) =>
     entry.name.toLowerCase().includes(searchValue)
