@@ -10,10 +10,21 @@ export function ShortList({ names, shortList, setShortList }) {
     setShortList(shortList.filter((i) => i !== nameID));
   };
 
+  const hasNames = shortListedNames.length > 0;
+
   return (
     <div className="short-list">
       {/* <pre>{JSON.stringify(shortList)}</pre>; */}
-      <NameList nameList={shortListedNames} onItemClick={removeFromShortList} />
+      <h2>{hasNames ? "Your Shortlist" : "Click on a name to shortlist it"}</h2>
+      {hasNames && (
+        <>
+          <NameList
+            nameList={shortListedNames}
+            onItemClick={removeFromShortList}
+          />
+          <hr />
+        </>
+      )}
     </div>
   );
 }
