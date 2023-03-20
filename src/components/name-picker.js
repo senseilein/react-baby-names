@@ -7,13 +7,21 @@ export function NamePicker({ names, searchValue, shortList, setShortList }) {
   );
   // it will initially renders the whole list
 
+  const addToShortList = (nameID) => {
+    setShortList([...shortList, nameID]);
+  };
+
   return (
     <div id="NamePicker">
       <ul>
         {filteredNames.map((entry) => {
           return (
             <li className={entry.sex} key={entry.id}>
-              <button>{entry.name}</button>
+              // pass the onClick as an arrow function since it takes an
+              argument
+              <button onClick={() => addToShortList(entry.id)}>
+                {entry.name}
+              </button>
             </li>
           );
         })}

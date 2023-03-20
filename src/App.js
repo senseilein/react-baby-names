@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import { NamePicker } from "./components/name-picker";
 import { Search } from "./components/search";
+import { ShortList } from "./components/short-list";
 
 function App({ names }) {
   // no need to import name here because it is received from parent Component = at the root of the app (in index.js)
@@ -11,11 +12,12 @@ function App({ names }) {
 
   const [searchValue, setSearchValue] = useState("");
 
-  const [shorlist, setShortList] = useState([]);
+  const [shortList, setShortList] = useState([]);
 
   return (
     <>
       <Search searchValue={searchValue} setSearchValue={setSearchValue} />
+      <ShortList shortList={shortList} setShortList={setShortList} />
       <NamePicker
         names={names}
         searchValue={searchValue}
