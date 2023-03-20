@@ -18,3 +18,9 @@ root.render(
     <App names={names} />
   </React.StrictMode>
 );
+
+/**
+ **TODO 
+ https://egghead.io/lessons/react-reduce-prop-drilling-in-react-with-the-context-api
+ https://egghead.io/lessons/react-improve-developer-experience-for-accessing-context-with-a-custom-react-hook
+ */
