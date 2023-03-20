@@ -6,6 +6,7 @@ import { NamePicker } from "./components/name-picker";
 import { Search } from "./components/search";
 import { ShortList } from "./components/short-list";
 import { ResetSearch } from "./components/reset-search";
+import { Footer } from "./components/footer";
 
 function App({ names }) {
   // no need to import name here because it is received from parent Component = at the root of the app (in index.js)
@@ -36,6 +37,7 @@ function App({ names }) {
           setShortList={setShortList}
         />
       </main>
+      <Footer />
     </>
   );
 }
